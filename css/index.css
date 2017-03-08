@@ -1,0 +1,43 @@
+input {
+  display: block;
+}
+
+body {
+  width: 100%;
+}
+
+div {
+  margin: 0 auto;
+  background-color: gray;
+}
+
+img {
+  width: 300px;
+  margin: 20px auto;
+  border: 5px solid black;
+}
+
+.meme-container {
+  position:relative;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+}
+
+.top-text {
+  position: absolute;
+  top: 10%;
+  right: 65%;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 10%;
+  right: 65%;
+}
+
+header {
+  text-align: center;
+}

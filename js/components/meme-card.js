@@ -24,13 +24,16 @@ export default class MemeCard extends React.Component {
   render () {
       return (
         <div className="meme-card">
-          <label></label>
+          <h1>Meme Generator</h1>
+          <label>Top Text: </label>
           <input type="text" onChange={this.topChangeHandler}/>
-          <label></label>
+          <label>Bottom Text: </label>
           <input type="text" onChange={this.bottomChangeHandler}/>
-          <img src="http://hung-meme-maker.herokuapp.com/system/photos/images/000/000/001/thumb/AintNobody.jpg?1374553487"></img>
-          <p>{this.state.topText}</p>
-          <p>{this.state.bottomText}</p>
+          <div className="meme-container">
+            <img className="current-image" src="http://hung-meme-maker.herokuapp.com/system/photos/images/000/000/001/thumb/AintNobody.jpg?1374553487"></img>
+            <p className="top-text">{this.state.topText}</p>
+            <p className="bottom-text">{this.state.bottomText}</p>
+          </div>
           <button>Submit</button>
         </div>
       );
