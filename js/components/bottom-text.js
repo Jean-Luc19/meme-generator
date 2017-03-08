@@ -4,7 +4,7 @@ export default function Bottomtext (props) {
     return (
         <div className="bottom-input">
             <label>Bottom Text: </label>
-            <input type="text" onChange={props.bottomChangeHandler}/>
+            <input type="text" value={props.bottomText} onChange={props.bottomChangeHandler}/>
         </div>
     );
 }

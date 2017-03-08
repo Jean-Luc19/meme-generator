@@ -30,6 +30,8 @@ export default class MemeContainer extends React.Component {
 
     cardBuilder (e, img) {
       console.log(img);
+      this.setState({topText: ""})
+      this.setState({bottomText: ""})
       this.setState({imgSrc: img})
     }
 
