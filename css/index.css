@@ -6,7 +6,7 @@ body {
   width: 100%;
 }
 
-div {
+body {
   margin: 0 auto;
   background-color: gray;
 }
@@ -17,25 +17,35 @@ img {
   border: 5px solid black;
 }
 
-.meme-container {
+.image-list {
   position:relative;
+}
+
+.meme-card {
+    position: absolute;
+    top: 5%;
+    right: 50%;
+    z-index: 1;
+    background-color: aquamarine;
 }
 
 p {
   color: white;
-  font-size: 18px;
+  font-size: 35px;
+  font-weight: bolder;
+
 }
 
 .top-text {
   position: absolute;
-  top: 10%;
-  right: 65%;
+  top: 25%;
+  right: 35%;
 }
 
 .bottom-text {
   position: absolute;
   bottom: 10%;
-  right: 65%;
+  right: 35%;
 }
 
 header {

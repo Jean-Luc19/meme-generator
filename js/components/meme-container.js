@@ -12,7 +12,8 @@ export default class MemeContainer extends React.Component {
             topText: '',
             bottomText: '',
             imgSrc: "http://hung-meme-maker.herokuapp.com/system/photos/images/000/000/001/thumb/AintNobody.jpg?1374553487",
-            images: imageArray
+            images: imageArray,
+            
         }
 
         this.topChangeHandler = this.topChangeHandler.bind(this);
@@ -54,10 +55,7 @@ export default class MemeContainer extends React.Component {
   render() {
     return (
         <div className="image-list">
-            <ul>
-                {this.state.images.map((img, index) =>
-                  <li><img src={img} onClick={e => this.handleImageClick(e, img)} key={index} /></li>)}
-            </ul>
+            <h1>Meme Generator</h1>
             <MemeCard topText={this.state.topText}
                       bottomText={this.state.bottomText}
                       topChangeHandler={this.topChangeHandler}
@@ -67,6 +65,11 @@ export default class MemeContainer extends React.Component {
                       displayEditArea={this.displayEditArea}
 
             />
+            <ul>
+                {this.state.images.map((img, index) =>
+                  <li><img src={img} onClick={e => this.handleImageClick(e, img)} key={index} /></li>)}
+            </ul>
+
         </div>
     );
   }
