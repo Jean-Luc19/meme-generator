@@ -1,39 +1,35 @@
 import React from 'react';
-
+import Toptext from './top-text';
+import Bottomtext from './bottom-text';
+import Mememedia from './meme-media';
 export default class MemeCard extends React.Component {
   constructor() {
       super();
       this.state = {
           topText: '',
-          bottomText: ''
+          bottomText: '',
+          imgSrc: "http://hung-meme-maker.herokuapp.com/system/photos/images/000/000/001/thumb/AintNobody.jpg?1374553487"
       }
 
       this.topChangeHandler = this.topChangeHandler.bind(this);
       this.bottomChangeHandler = this.bottomChangeHandler.bind(this);
 
   }
+  
   topChangeHandler (e) {
       this.setState({topText: e.target.value})
-      console.log(this.state.topText, e.target.value);
   }
 
   bottomChangeHandler (e) {
       this.setState({bottomText: e.target.value})
-      console.log("hello");
   }
   render () {
       return (
         <div className="meme-card">
           <h1>Meme Generator</h1>
-          <label>Top Text: </label>
-          <input type="text" onChange={this.topChangeHandler}/>
-          <label>Bottom Text: </label>
-          <input type="text" onChange={this.bottomChangeHandler}/>
-          <div className="meme-container">
-            <img className="current-image" src="http://hung-meme-maker.herokuapp.com/system/photos/images/000/000/001/thumb/AintNobody.jpg?1374553487"></img>
-            <p className="top-text">{this.state.topText}</p>
-            <p className="bottom-text">{this.state.bottomText}</p>
-          </div>
+          <Toptext topText={this.topChangeHandler} />
+          <Bottomtext bottomText={this.bottomChangeHandler} />
+          <Mememedia topText={this.state.topText} bottomText={this.state.bottomText} imgSrc={this.state.imgSrc}/>
           <button>Submit</button>
         </div>
       );
